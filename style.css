@@ -1,0 +1,21 @@
+body {
+    font-family: 'Times New Roman';
+}
+
+#izquierda {
+    width: 20%;
+}
+
+#barraNavegacion {
+    display: flex;
+    flex-direction: column;
+}
+
+#derecha {
+    width: 70%;
+    text-align: justify;
+}
+
+main {
+    display: flex;
+}

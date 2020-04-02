@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main-doc">
+
+        <div id="izquierda">
+            <nav id="navbar">
+                <header id="barraNavegacion">
+                    <h2>Informacion tecnica</h2>
+                    <a href="#Sobre_el_Control_de_Versiones" class="nav-link">Sobre el Control de Versiones</a>
+                    <a href="#Fundamentos_de_Git" class="nav-link">Fundamentos de Git</a>
+                    <a href="#Ramificaciones_en_Git" class="nav-link">Ramificaciones en Git</a>
+                    <a href="#Git_en_el_Servidor" class="nav-link">Git en el Servidor</a>
+                    <a href="#Git_en_Entornos_Distribuidos" class="nav-link">Git en Entornos Distribuidos</a>
+                    <a href="#GitHub"class="nav-link">GitHub</a>
+                    <a href="#Herramientas_de_Git" class="nav-link">Herramientas de Git</a>
+                    <a href="#Personalizacion_de_Git" class="nav-link">Personalizacion de Git</a>
+                    <a href="#Git_y_Otros_Sistemas" class="nav-link">Git y Otros Sistemas</a>
+                    <a href="#Git_Internamente" class="nav-link">Git Internamente</a>
+                    <a href="#Git_en_Otros_Entornos" class="nav-link">Git en Otros Entornos</a>
+                    <a href="#Integrando_Git_en_tus_Aplicaciones" class="nav-link">Integrando Git en tus Aplicaciones</a>
+                    <a href="#Comandos_de_Git" class="nav-link">Comandos de Git</a>
+                </header>
+            </nav>
+        </div>
+
+        <div id="derecha">
+            <section class="main-section" id="Sobre_el_Control_de_Versiones">
+                <header>
+                    <h3>Sobre el Control de Versiones</h3>
+                </header>
+                <p>Este capítulo se va a hablar de cómo comenzar a utilizar Git. Empezaremos describiendo algunos conceptos básicos sobre las herramientas de control de versiones; después, trataremos de explicar cómo hacer que Git funcione en tu sistema; finalmente, exploraremos cómo configurarlo para empezar a trabajar con él. Al final de este capítulo deberás entender las razones por las cuales Git existe y conviene que lo uses, y deberás tener todo preparado para comenzar.</p>
+                <h3>Acerca del Control de Versiones</h3>
+                <p>¿Qué es un control de versiones, y por qué debería importarte? Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante. Aunque en los ejemplos de este libro usarás archivos de código fuente como aquellos cuya versión está siendo controlada, en realidad puedes hacer lo mismo con casi cualquier tipo de archivo que encuentres en una computadora.</p>
+                <p>Si eres diseñador gráfico o de web y quieres mantener cada versión de una imagen o diseño (es algo que sin duda vas a querer), usar un sistema de control de versiones (VCS por sus siglas en inglés) es una decisión muy acertada. Dicho sistema te permite regresar a versiones anteriores de tus archivos, regresar a una versión anterior del proyecto completo, comparar cambios a lo largo del tiempo, ver quién modificó por última vez algo que pueda estar causando problemas, ver quién introdujo un problema y cuándo, y mucho más. Usar un VCS también significa generalmente que si arruinas o pierdes archivos, será posible recuperarlos fácilmente. Adicionalmente, obtendrás todos estos beneficios a un costo muy bajo.</p>
+                <h3>Sistemas de Control de Versiones Locales</h3>
+                <p>Un método de control de versiones, usado por muchas personas, es copiar los archivos a otro directorio (quizás indicando la fecha y hora en que lo hicieron, si son ingeniosos). Este método es muy común porque es muy sencillo, pero también es tremendamente propenso a errores. Es fácil olvidar en qué directorio te encuentras y guardar accidentalmente en el archivo equivocado o sobrescribir archivos que no querías.      </p>
+                <div>
+                    <img src="img-1-1.png">
+                </div>
+                <p>Figure 1. control de versiones local.</p>
+                <p>Una de las herramientas de control de versiones más popular fue un sistema llamado RCS, que todavía podemos encontrar en muchas de las computadoras actuales. Incluso el famoso sistema operativo Mac OS X incluye el comando rcs cuando instalas las herramientas de desarrollo. Esta herramienta funciona guardando conjuntos de parches (es decir, las diferencias entre archivos) en un formato especial en disco, y es capaz de recrear cómo era un archivo en cualquier momento a partir de dichos parches.</p>
+                <h3>Sistemas de Control de Versiones Centralizados</h3>
+                <p>El siguiente gran problema con el que se encuentran las personas es que necesitan colaborar con desarrolladores en otros sistemas. Los sistemas de Control de Versiones Centralizados (CVCS por sus siglas en inglés) fueron desarrollados para solucionar este problema. Estos sistemas, como CVS, Subversion y Perforce, tienen un único servidor que contiene todos los archivos versionados y varios clientes que descargan los archivos desde ese lugar central. Este ha sido el estándar para el control de versiones por muchos años.</p>
+                <div>
+                    <img src="img-1-2.png">
+                </div>
+                <p>Figure 2. Control de versiones centralizado.</p>
+                <p>Esta configuración ofrece muchas ventajas, especialmente frente a VCS locales. Por ejemplo, todas las personas saben hasta cierto punto en qué están trabajando los otros colaboradores del proyecto. Los administradores tienen control detallado sobre qué puede hacer cada usuario, y es mucho más fácil administrar un CVCS que tener que lidiar con bases de datos locales en cada cliente.</p>
+                <p>Sin embargo, esta configuración también tiene serias desventajas. La más obvia es el punto único de fallo que representa el servidor centralizado. Si ese servidor se cae durante una hora, entonces durante esa hora nadie podrá colaborar o guardar cambios en archivos en los que hayan estado trabajando. Si el disco duro en el que se encuentra la base de datos central se corrompe, y no se han realizado copias de seguridad adecuadamente, se perderá toda la información del proyecto, con excepción de las copias instantáneas que las personas tengan en sus máquinas locales. Los VCS locales sufren de este mismo problema: Cuando tienes toda la historia del proyecto en un mismo lugar, te arriesgas a perderlo todo.</p>
+                <h3>Sistemas de Control de Versiones Distribuidos</h3>
+                <p>Los sistemas de Control de Versiones Distribuidos (DVCS por sus siglas en inglés) ofrecen soluciones para los problemas que han sido mencionados. En un DVCS (como Git, Mercurial, Bazaar o Darcs), los clientes no solo descargan la última copia instantánea de los archivos, sino que se replica completamente el repositorio. De esta manera, si un servidor deja de funcionar y estos sistemas estaban colaborando a través de él, cualquiera de los repositorios disponibles en los clientes puede ser copiado al servidor con el fin de restaurarlo. Cada clon es realmente una copia completa de todos los datos.</p>
+                <div>
+                    <img src="img-1-3.png">
+                </div>
+                <p>Figure 3. Control de versiones distribuido.</p>
+                <p>Además, muchos de estos sistemas se encargan de manejar numerosos repositorios remotos con los cuales pueden trabajar, de tal forma que puedes colaborar simultáneamente con diferentes grupos de personas en distintas maneras dentro del mismo proyecto. Esto permite establecer varios flujos de trabajo que no son posibles en sistemas centralizados, como pueden ser los modelos jerárquicos.</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Fundamentos_de_Git">
+                <header>
+                    <h3>Fundamentos de Git</h3>
+                </header>
+                <code></code>
+                <code></code>
+                <code></code>
+                <code></code>
+                <code></code><!--usar entre el texto para hacerlo ver como una consola-->
+                
+            </section>
+
+            <section class="main-section" id="Ramificaciones_en_Git">
+                <header>
+                    <h3>Ramificaciones en Git</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Git_en_el_Servidor">
+                <header>
+                    <h3>Git en el Servidor</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Git_en_Entornos_Distribuidos">
+                <header>
+                    <h3>Git en Entornos Distribuidos</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="GitHub">
+                <header>
+                    <h3>GitHub</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Herramientas_de_Git">
+                <header>
+                    <h3>Herramientas de Git</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Personalizacion_de_Git">
+                <header>
+                    <h3>Personalizacion de Git</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Git_y_Otros_Sistemas">
+                <header>
+                    <h3>Git y Otros Sistemas</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Git_Internamente">
+                <header>
+                    <h3>Git Internamente</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Git_en_Otros_Entornos">
+                <header>
+                    <h3>Git en Otros Entornos</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Integrando_Git_en_tus_Aplicaciones">
+                <header>
+                    <h3>Integrando Git en tus Aplicaciones</h3>
+                </header>
+            </section>
+
+            <section class="main-section" id="Comandos_de_Git">
+                <header>
+                <h3>Comandos de Git</h2>
+                </header>
+            </section>
+        </div>
+
+
+    
+
+    </main>
+    <script src="test.js"></script>
+
+</body>
+</html>
