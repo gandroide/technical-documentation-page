@@ -1,9 +1,18 @@
 body {
     font-family: 'Times New Roman';
+    background-color: #707078;
 }
 
 #izquierda {
     width: 20%;
+    position: fixed;
+    padding: 1.5em;
+    margin-left: 2em;
+}
+
+#barraNavegacion > h2 {
+    margin: 0em;
+    padding-left: 2em;
 }
 
 #barraNavegacion {
@@ -12,10 +21,38 @@ body {
 }
 
 #derecha {
-    width: 70%;
+    width: 50%;
     text-align: justify;
+    margin-left: 30em;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 5px 5px 15px black;
+
 }
 
 main {
     display: flex;
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+ul > li {
+    padding: 8px 10px;
+    color: #111;
+}
+
+ul li:nth-child(odd) { /* filas pares */
+    background-color: #f5f5f5;
+}
+
+ul li:nth-child(even) { /* filas impares */
+    background-color: #e5e5e5;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
 }

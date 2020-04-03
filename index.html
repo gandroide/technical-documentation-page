@@ -13,19 +13,21 @@
             <nav id="navbar">
                 <header id="barraNavegacion">
                     <h2>Informacion tecnica</h2>
-                    <a href="#Sobre_el_Control_de_Versiones" class="nav-link">Sobre el Control de Versiones</a>
-                    <a href="#Fundamentos_de_Git" class="nav-link">Fundamentos de Git</a>
-                    <a href="#Ramificaciones_en_Git" class="nav-link">Ramificaciones en Git</a>
-                    <a href="#Git_en_el_Servidor" class="nav-link">Git en el Servidor</a>
-                    <a href="#Git_en_Entornos_Distribuidos" class="nav-link">Git en Entornos Distribuidos</a>
-                    <a href="#GitHub"class="nav-link">GitHub</a>
-                    <a href="#Herramientas_de_Git" class="nav-link">Herramientas de Git</a>
-                    <a href="#Personalizacion_de_Git" class="nav-link">Personalizacion de Git</a>
-                    <a href="#Git_y_Otros_Sistemas" class="nav-link">Git y Otros Sistemas</a>
-                    <a href="#Git_Internamente" class="nav-link">Git Internamente</a>
-                    <a href="#Git_en_Otros_Entornos" class="nav-link">Git en Otros Entornos</a>
-                    <a href="#Integrando_Git_en_tus_Aplicaciones" class="nav-link">Integrando Git en tus Aplicaciones</a>
-                    <a href="#Comandos_de_Git" class="nav-link">Comandos de Git</a>
+                    <ul>
+                        <li id="link1"><a href="#Sobre_el_Control_de_Versiones" class="nav-link">Sobre el Control de Versiones</a></li>
+                        <li id="link2"><a href="#Fundamentos_de_Git" class="nav-link">Fundamentos de Git</a></li>
+                        <li id="link3"><a href="#Ramificaciones_en_Git" class="nav-link">Ramificaciones en Git</a></li>
+                        <li id="link4"><a href="#Git_en_el_Servidor" class="nav-link">Git en el Servidor</a></li>
+                        <li id="link5"><a href="#Git_en_Entornos_Distribuidos" class="nav-link">Git en Entornos Distribuidos</a></li>
+                        <li id="link6"><a href="#GitHub"class="nav-link">GitHub</a></li>
+                        <li id="link7"><a href="#Herramientas_de_Git" class="nav-link">Herramientas de Git</a></li>
+                        <li id="link8"><a href="#Personalizacion_de_Git" class="nav-link">Personalizacion de Git</a></li>
+                        <li id="link9"><a href="#Git_y_Otros_Sistemas" class="nav-link">Git y Otros Sistemas</a></li>
+                        <li id="link10"><a href="#Git_Internamente" class="nav-link">Git Internamente</a></li>
+                        <li id="link11"><a href="#Git_en_Otros_Entornos" class="nav-link">Git en Otros Entornos</a></li>
+                        <li id="link12"><a href="#Integrando_Git_en_tus_Aplicaciones" class="nav-link">Integrando Git en tus Aplicaciones</a></li>
+                        <li id="link13"><a href="#Comandos_de_Git" class="nav-link">Comandos de Git</a></li>
+                    </ul> 
                 </header>
             </nav>
         </div>
@@ -61,49 +63,324 @@
                 </div>
                 <p>Figure 3. Control de versiones distribuido.</p>
                 <p>Además, muchos de estos sistemas se encargan de manejar numerosos repositorios remotos con los cuales pueden trabajar, de tal forma que puedes colaborar simultáneamente con diferentes grupos de personas en distintas maneras dentro del mismo proyecto. Esto permite establecer varios flujos de trabajo que no son posibles en sistemas centralizados, como pueden ser los modelos jerárquicos.</p>
+                <h2>1.2 Inicio - Sobre el control de Versiones - Una breve historia de Git</h2>
+                <h3>Una breve historia de Git</h3>
+                <p>Como muchas de las grandes cosas en esta vida, Git comenzó con un poco de destrucción creativa y una gran polémica.</p>
+                <p>El kernel de Linux es un proyecto de software de código abierto con un alcance bastante amplio. Durante la mayor parte del mantenimiento del kernel de Linux (1991-2002), los cambios en el software se realizaban a través de parches y archivos. En el 2002, el proyecto del kernel de Linux empezó a usar un DVCS propietario llamado BitKeeper.</p>
+                <p>En el 2005, la relación entre la comunidad que desarrollaba el kernel de Linux y la compañía que desarrollaba BitKeeper se vino abajo y la herramienta dejó de ser ofrecida de manera gratuita. Esto impulsó a la comunidad de desarrollo de Linux (y en particular a Linus Torvalds, el creador de Linux) a desarrollar su propia herramienta basada en algunas de las lecciones que aprendieron mientras usaban BitKeeper. Algunos de los objetivos del nuevo sistema fueron los siguientes:</p>
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <li>Velocidad</li>
+                    <li>Diseño sencillo</li>
+                    <li>Gran soporte para desarrollo no lineal (miles de ramas paralelas)</li>
+                    <li>Completamente distribuido</li>
+                    <li>Capaz de manejar grandes proyectos (como el kernel de Linux) eficientemente (velocidad y tamaño de los datos)</li>
                 </ul>
+                <p>Desde su nacimiento en el 2005, Git ha evolucionado y madurado para ser fácil de usar y conservar sus características iniciales. Es tremendamente rápido, muy eficiente con grandes proyectos y tiene un increíble sistema de ramificación (branching) para desarrollo no lineal (véase Ramificaciones en Git)</p>
             </section>
-
+<!--capitulo 1.0 completo hasta el 1.2-->
             <section class="main-section" id="Fundamentos_de_Git">
                 <header>
                     <h3>Fundamentos de Git</h3>
                 </header>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code>
-                <code></code><!--usar entre el texto para hacerlo ver como una consola-->
-                
+                <h3>Obteniendo un repositorio Git</h3>
+                <p>Si pudieras leer solo un capítulo para empezar a trabajar con Git, este es el capítulo que debes leer. Este capítulo cubre todos los comandos básicos que necesitas para hacer la gran mayoría de cosas a las que eventualmente vas a dedicar tu tiempo mientras trabajas con Git. Al final del capítulo, deberás ser capaz de configurar e inicializar un repositorio, comenzar y detener el seguimiento de archivos, y preparar (stage) y confirmar (commit) cambios. También te enseñaremos a configurar Git para que ignore ciertos archivos y patrones, cómo enmendar errores rápida y fácilmente, cómo navegar por la historia de tu proyecto y ver cambios entre confirmaciones, y cómo enviar (push) y recibir (pull) de repositorios remotos.</p>
+                <h3>Obteniendo un repositorio Git</h3><!--titulo resaltado-->
+                <p>Puedes obtener un proyecto Git de dos maneras. La primera es tomar un proyecto o directorio existente e importarlo en Git. La segunda es clonar un repositorio existente en Git desde otro servidor.</p>
+                <h3>Inicializando un repositorio en un directorio existente</h3>
+                <p>Si estás empezando a seguir un proyecto existente en Git, debes ir al directorio del proyecto y usar el siguiente comando:</p>
+                <code>$ git init</code>
+                <p>Esto crea un subdirectorio nuevo llamado .git, el cual contiene todos los archivos necesarios del repositorio – un esqueleto de un repositorio de Git. Todavía no hay nada en tu proyecto que esté bajo seguimiento. Puedes revisar Los entresijos internos de Git para obtener más información acerca de los archivos presentes en el directorio .git que acaba de ser creado.</p>
+                <p>Si deseas empezar a controlar versiones de archivos existentes (a diferencia de un directorio vacío), probablemente deberías comenzar el seguimiento de esos archivos y hacer una confirmación inicial. Puedes conseguirlo con unos pocos comandos git add para especificar qué archivos quieres controlar, seguidos de un git commit para confirmar los cambios:</p>
+                <code>$ git add *.c</code>
+                <code>$ git add LICENSE</code>
+                <code>$ git commit -m 'initial project version'</code>
+                <p>Veremos lo que hacen estos comandos más adelante. En este momento, tienes un repositorio de Git con archivos bajo seguimiento y una confirmación inicial.</p>
+                <h3>Clonando un repositorio existente</h3>
+                <p>Si deseas obtener una copia de un repositorio Git existente — por ejemplo, un proyecto en el que te gustaría contribuir — el comando que necesitas es git clone. Si estás familizarizado con otros sistemas de control de versiones como Subversion, verás que el comando es "clone" en vez de "checkout". Es una distinción importante, ya que Git recibe una copia de casi todos los datos que tiene el servidor. Cada versión de cada archivo de la historia del proyecto es descargada por defecto cuando ejecutas git clone. De hecho, si el disco de tu servidor se corrompe, puedes usar cualquiera de los clones en cualquiera de los clientes para devolver el servidor al estado en el que estaba cuando fue clonado (puede que pierdas algunos hooks del lado del servidor y demás, pero toda la información acerca de las versiones estará ahí) — véase Configurando Git en un servidor para más detalles.</p>
+                <p>Puedes clonar un repositorio con git clone [url]. Por ejemplo, si quieres clonar la librería de Git llamada libgit2 puedes hacer algo así:</p>
+                <code>$ git clone https://github.com/libgit2/libgit2</code><!--usar entre el texto para hacerlo ver como una consola-->
+                <p>Esto crea un directorio llamado libgit2, inicializa un directorio .git en su interior, descarga toda la información de ese repositorio y saca una copia de trabajo de la última versión. Si te metes en el directorio libgit2, verás que están los archivos del proyecto listos para ser utilizados. Si quieres clonar el repositorio a un directorio con otro nombre que no sea libgit2, puedes especificarlo con la siguiente opción de línea de comandos:</p>
+                <code>$ git clone https://github.com/libgit2/libgit2 mylibgit</code>
+                <p>Ese comando hace lo mismo que el anterior, pero el directorio de destino se llamará mylibgit.</p>
+                <p>Git te permite usar distintos protocolos de transferencia. El ejemplo anterior usa el protocolo https://, pero también puedes utilizar git:// o usuario@servidor:ruta/del/repositorio.git que utiliza el protocolo de transferencia SSH. En Configurando Git en un servidor se explicarán todas las opciones disponibles a la hora de configurar el acceso a tu repositorio de Git, y las ventajas e inconvenientes de cada una.</p>
+                <!--fundamentos de git Obteniendo un repositorio git 2.1 solamente-->
             </section>
 
             <section class="main-section" id="Ramificaciones_en_Git">
                 <header>
                     <h3>Ramificaciones en Git</h3>
                 </header>
+                <p>Cualquier sistema de control de versiones moderno tiene algún mecanismo para soportar el uso de ramas. Cuando hablamos de ramificaciones, significa que tú has tomado la rama principal de desarrollo (master) y a partir de ahí has continuado trabajando sin seguir la rama principal de desarrollo. En muchos sistemas de control de versiones este proceso es costoso, pues a menudo requiere crear una nueva copia del código, lo cual puede tomar mucho tiempo cuando se trata de proyectos grandes.</p>
+                <p>Algunas personas resaltan que uno de los puntos más fuertes de Git es su sistema de ramificaciones y lo cierto es que esto le hace resaltar sobre los otros sistemas de control de versiones. ¿Por qué esto es tan importante? La forma en la que Git maneja las ramificaciones es increíblemente rápida, haciendo así de las operaciones de ramificación algo casi instantáneo, al igual que el avance o el retroceso entre distintas ramas, lo cual también es tremendamente rápido. A diferencia de otros sistemas de control de versiones, Git promueve un ciclo de desarrollo donde las ramas se crean y se unen ramas entre sí, incluso varias veces en el mismo día. Entender y manejar esta opción te proporciona una poderosa y exclusiva herramienta que puede, literalmente, cambiar la forma en la que desarrollas.</p>
+                <h3>¿Qué es una rama?</h3><!--titulo resaltado-->
+                <p>Para entender realmente cómo ramifica Git, previamente hemos de examinar la forma en que almacena sus datos.</p>
+                <p>Recordando lo citado en Inicio - Sobre el Control de Versiones, Git no los almacena de forma incremental (guardando solo diferencias), sino que los almacena como una serie de instantáneas (copias puntuales de los archivos completos, tal y como se encuentran en ese momento).</p>
+                <p>En cada confirmación de cambios (commit), Git almacena una instantánea de tu trabajo preparado. Dicha instantánea contiene además unos metadatos con el autor y el mensaje explicativo, y uno o varios apuntadores a las confirmaciones (commit) que sean padres directos de esta (un padre en los casos de confirmación normal, y múltiples padres en los casos de estar confirmando una fusión (merge) de dos o más ramas).</p>
+                <p>Para ilustrar esto, vamos a suponer, por ejemplo, que tienes una carpeta con tres archivos, que preparas (stage) todos ellos y los confirmas (commit). Al preparar los archivos, Git realiza una suma de control de cada uno de ellos (un resumen SHA-1, tal y como se mencionaba en Inicio - Sobre el Control de Versiones), almacena una copia de cada uno en el repositorio (estas copias se denominan "blobs"), y guarda cada suma de control en el área de preparación (staging area):</p>
+                <code>$ git add README test.rb LICENSE</code>
+                <code>$ git commit -m 'initial commit of my project'</code>
+                <p>Cuando creas una confirmación con el comando git commit, Git realiza sumas de control de cada subdirectorio (en el ejemplo, solamente tenemos el directorio principal del proyecto), y las guarda como objetos árbol en el repositorio Git. Después, Git crea un objeto de confirmación con los metadatos pertinentes y un apuntador al objeto árbol raíz del proyecto.</p>
+                <p>En este momento, el repositorio de Git contendrá cinco objetos: un "blob" para cada uno de los tres archivos, un árbol con la lista de contenidos del directorio (más sus respectivas relaciones con los "blobs"), y una confirmación de cambios (commit) apuntando a la raíz de ese árbol y conteniendo el resto de metadatos pertinentes.</p.>
+                <div>
+                    <img src="img-3-1.png">
+                </div>
+                <code>Figure 9. Una confirmación y sus árboles</code>
+                <p>Si haces más cambios y vuelves a confirmar, la siguiente confirmación guardará un apuntador a su confirmación precedente.</p>
+                <div>
+                    <img src="img-3-2.png">
+                </div>
+                <code>Figure 10. Confirmaciones y sus predecesoras</code>
+                <p>Una rama Git es simplemente un apuntador móvil apuntando a una de esas confirmaciones. La rama por defecto de Git es la rama master. Con la primera confirmación de cambios que realicemos, se creará esta rama principal master apuntando a dicha confirmación. En cada confirmación de cambios que realicemos, la rama irá avanzando automáticamente.</p>
+                <p>NOTA: La rama “master” en Git, no es una rama especial. Es como cualquier otra rama. La única razón por la cual aparece en casi todos los repositorios es porque es la que crea por defecto el comando git init y la gente no se molesta en cambiarle el nombre.</p>
+                <div>
+                    <img src="img-3-3.png">
+                </div>
+                <code>Figure 11. Una rama y su historial de confirmaciones</code>
+                <p>¿Qué sucede cuando creas una nueva rama? Bueno…​, simplemente se crea un nuevo apuntador para que lo puedas mover libremente. Por ejemplo, supongamos que quieres crear una rama nueva denominada "testing". Para ello, usarás el comando git branch:</p>
+                <code>$ git branch testing</code>
+                <p>Esto creará un nuevo apuntador apuntando a la misma confirmación donde estés actualmente.</p>
+                <div>
+                    <img src="img-3-4.png">
+                </div>
+                <code>Figure 12. Dos ramas apuntando al mismo grupo de confirmaciones</code>
+                <p>Y, ¿cómo sabe Git en qué rama estás en este momento? Pues…​, mediante un apuntador especial denominado HEAD. Aunque es preciso comentar que este HEAD es totalmente distinto al concepto de HEAD en otros sistemas de control de cambios como Subversion o CVS. En Git, es simplemente el apuntador a la rama local en la que tú estés en ese momento, en este caso la rama master; pues el comando git branch solamente crea una nueva rama, pero no salta a dicha rama.</p>
+                <div>
+                    <img src="img-3-5.png">
+                </div>
+                <code>Figure 13. Apuntador HEAD a la rama donde estás actualmente</code>
+                <p>Esto puedes verlo fácilmente al ejecutar el comando git log para que te muestre a dónde apunta cada rama. Esta opción se llama --decorate.</p>
+                <code>$ git log --oneline --decorate</code>
+                <code>f30ab (HEAD, master, testing) add feature #32 - ability to add new</code>
+                <code>34ac2 fixed bug #1328 - stack overflow under certain conditions</code>
+                <code>98ca9 initial commit of my project</code>
+                <p>Puedes ver que las ramas “master” y “testing” están junto a la confirmación f30ab.</p>
+                <h3>Cambiar de Rama</h3>
+                <p>Para saltar de una rama a otra, tienes que utilizar el comando git checkout. Hagamos una prueba, saltando a la rama testing recién creada:</p>
+                <code>$ git checkout testing</code>
+                <p>Esto mueve el apuntador HEAD a la rama testing.</p>
+                <div>
+                    <img src="img-3-6.png">
+                </div>
+                <code>Figure 14. El apuntador HEAD apunta a la rama actual</code>
+                <p>¿Cuál es el significado de todo esto? Bueno…​, lo veremos tras realizar otra confirmación de cambios:</p>
+                <code>$ vim test.rb</code>
+                <code>$ git commit -a -m 'made a change'</code>
+                <div>
+                    <img src="img-3-7.png">
+                </div>
+                <code>Figure 15. La rama apuntada por HEAD avanza con cada confirmación de cambios</code>
+                <p>Observamos algo interesante: la rama testing avanza, mientras que la rama master permanece en la confirmación donde estaba cuando lanzaste el comando git checkout para saltar. Volvamos ahora a la rama master:</p>
+                <code>$ git checkout master</code>
+                <div>
+                    <img src="img-3-8.png">
+                </div>
+                <code>Figure 16. HEAD apunta a otra rama cuando hacemos un salto</code>
+                <p>Este comando realiza dos acciones: Mueve el apuntador HEAD de nuevo a la rama master, y revierte los archivos de tu directorio de trabajo; dejándolos tal y como estaban en la última instantánea confirmada en dicha rama master. Esto supone que los cambios que hagas desde este momento en adelante, divergirán de la antigua versión del proyecto. Básicamente, lo que se está haciendo es rebobinar el trabajo que habías hecho temporalmente en la rama testing; de tal forma que puedas avanzar en otra dirección diferente.</p>
+                <p>NOTA: Saltar entre ramas cambia archivos en tu directorio de trabajo. Es importante destacar que cuando saltas a una rama en Git, los archivos de tu directorio de trabajo cambian. Si saltas a una rama antigua, tu directorio de trabajo retrocederá para verse como lo hacía la última vez que confirmaste un cambio en dicha rama. Si Git no puede hacer el cambio limpiamente, no te dejará saltar.</p>
+                <P>Haz algunos cambios más y confírmalos:</P>
+                <code>$ vim test.rb</code>
+                <code>$ git commit -a -m 'made other changes'</code>
+                <p>Ahora el historial de tu proyecto diverge (ver Los registros de las ramas divergen). Has creado una rama y saltado a ella, has trabajado sobre ella; has vuelto a la rama original, y has trabajado también sobre ella. Los cambios realizados en ambas sesiones de trabajo están aislados en ramas independientes: puedes saltar libremente de una a otra según estimes oportuno. Y todo ello simplemente con tres comandos: git branch, git checkout y git commit.</p>
+                <div>
+                    <img src="img-3-9.png">
+                </div>
+                <code>Figure 17. Los registros de las ramas divergen</code>
+                <p>También puedes ver esto fácilmente utilizando el comando git log. Si ejecutas git log --oneline --decorate --graph --all te mostrará el historial de tus confirmaciones, indicando dónde están los apuntadores de tus ramas y como ha divergido tu historial.</p>
+                <code>$ git log --oneline --decorate --graph --all</code>
+                <code>* c2b9e (HEAD, master) made other changes</code>
+                <code>| * 87ab2 (testing) made a change</code>
+                <code>|/</code>
+                <code>* f30ab add feature #32 - ability to add new formats to the</code>
+                <code>* 34ac2 fixed bug #1328 - stack overflow under certain conditions</code>
+                <code>* 98ca9 initial commit of my project</code>
+                <p>Debido a que una rama Git es realmente un simple archivo que contiene los 40 caracteres de una suma de control SHA-1, (representando la confirmación de cambios a la que apunta), no cuesta nada el crear y destruir ramas en Git. Crear una nueva rama es tan rápido y simple como escribir 41 bytes en un archivo, (40 caracteres y un retorno de carro).</p>
+                <p>Esto contrasta fuertemente con los métodos de ramificación usados por otros sistemas de control de versiones, en los que crear una rama nueva supone el copiar todos los archivos del proyecto a un directorio adicional nuevo. Esto puede llevar segundos o incluso minutos, dependiendo del tamaño del proyecto; mientras que en Git el proceso es siempre instantáneo. Y además, debido a que se almacenan también los nodos padre para cada confirmación, el encontrar las bases adecuadas para realizar una fusión entre ramas es un proceso automático y generalmente sencillo de realizar. Animando así a los desarrolladores a utilizar ramificaciones frecuentemente.</p>
+                <p>Vamos a ver el por qué merece la pena hacerlo así.</p>
+                <!--ramificaciones en git 3.1 solamente-->
             </section>
 
             <section class="main-section" id="Git_en_el_Servidor">
                 <header>
                     <h3>Git en el Servidor</h3>
                 </header>
+                <p>En este punto, deberías ser capaz de realizar la mayoría de las tareas diarias para las cuales estarás usando Git. Sin embargo, para poder realizar cualquier colaboración en Git, necesitarás tener un repositorio remoto Git. Aunque técnicamente puedes enviar y recibir cambios desde repositorios de otros individuos, no se recomienda hacerlo porque, si no tienes cuidado, fácilmente podrías confundir en que es en lo que se está trabajando. Además, lo deseable es que tus colaboradores sean capaces de acceder al repositorio incluso si tu computadora no está en línea – muchas veces es útil tener un repositorio confiable en común. Por lo tanto, el método preferido para colaborar con otra persona es configurar un repositorio intermedio al cual ambos tengan acceso, y enviar (push) y recibir (pull) desde allí.</p>
+                <p>Poner en funcionamiento un servidor Git es un proceso bastante claro. Primero, eliges con qué protocolos ha de comunicarse tu servidor. La primera sección de este capítulo cubrirá los protocolos disponibles, así como los pros y los contras de cada uno. Las siguientes secciones explicarán algunas configuraciones comunes utilizando dichos protocolos y como poner a funcionar tu servidor con alguno de ellos. Finalmente, revisaremos algunas de las opciones hospedadas, si no te importa hospedar tu código en el servidor de alguien más y no quieres tomarte la molestia de configurar y mantener tu propio servidor.</p>
+                <p>Si no tienes interés en tener tu propio servidor, puedes saltarte hasta la última sección de este capítulo para ver algunas de las opciones para configurar una cuenta hospedada y seguir al siguiente capítulo, donde discutiremos los varios pormenores de trabajar en un ambiente de control de fuente distribuido.</p>
+                <p>Un repositorio remoto es generalmente un repositorio básico – un repositorio Git que no tiene directorio de trabajo. Dado que el repositorio es solamente utilizado como un punto de colaboración, no hay razón para tener una copia instantánea verificada en el disco; tan solo son datos Git. En los más simples términos, un repositorio básico es el contenido .git del directorio de tu proyecto y nada más.</p>
+                <h3>Los Protocolos</h3> <!--titulo resaltado-->
+                <p>Git puede usar cuatro protocolos principales para transferir datos: Local, HTTP, Secure Shell (SSH) y Git. Vamos a ver en qué consisten y las circunstancias en que querrás (o no) utilizar cada uno de ellos.</p>
+                <h3>Local Protocol</h3>
+                <p>El más básico es el Protocolo Local, donde el repositorio remoto es simplemente otra carpeta en el disco. Se utiliza habitualmente cuando todos los miembros del equipo tienen acceso a un mismo sistema de archivos, como por ejemplo un punto de montaje NFS, o en el caso menos frecuente de que todos se conectan al mismo computador. Aunque este último caso no es precisamente el ideal, ya que todas las instancias del repositorio estarían en la misma máquina; aumentando las posibilidades de una pérdida catastrófica.</p>
+                <p>Si dispones de un sistema de archivos compartido, podrás clonar (clone), enviar (push) y recibir (pull) a/desde repositorios locales basado en archivos. Para clonar un repositorio como estos, o para añadirlo como remoto a un proyecto ya existente, usa el camino (path) del repositorio como su URL. Por ejemplo, para clonar un repositorio local, puedes usar algo como:</p>
+                <code>$ git clone /opt/git/project.git</code>
+                <p>O como:</p>
+                <code>$ git clone file:///opt/git/project.git</code>
+                <p>Git trabaja ligeramente distinto si indicas file:// de forma explícita al comienzo de la URL. Si escribes simplemente el camino, Git intentará usar enlaces rígidos (hardlinks) o copiar directamente los archivos que necesita. Si escribes con el prefijo file://, Git lanza el proceso que usa habitualmente para transferir datos sobre una red; proceso que suele ser mucho menos eficiente. La única razón que puedes tener para indicar expresamente el prefijo file:// puede ser el querer una copia limpia del repositorio, descartando referencias u objetos superfluos. Esto sucede normalmente, tras haberlo importado desde otro sistema de control de versiones o algo similar (ver Los entresijos internos de Git sobre tareas de mantenimiento). Habitualmente, usaremos el camino (path) normal por ser casi siempre más rápido.</p>
+                <p>Para añadir un repositorio local a un proyecto Git existente, puedes usar algo como:</p>
+                <code>$ git remote add local_proj /opt/git/project.git</code>
+                <p>Con lo que podrás enviar (push) y recibir (pull) desde dicho remoto exactamente de la misma forma a como lo harías a través de una red.</p>
+                <h3>Ventajas</h3>
+                <p>Las ventajas de los repositorios basados en carpetas y archivos, son su simplicidad y el aprovechamiento de los permisos preexistentes de acceso. Si tienes un sistema de archivo compartido que todo el equipo pueda usar, preparar un repositorio es muy sencillo. Simplemente pones el repositorio básico en algún lugar donde todos tengan acceso a él y ajustas los permisos de lectura/escritura según proceda, tal y como lo harías para preparar cualquier otra carpeta compartida. En la próxima sección, Configurando Git en un servidor, veremos cómo exportar un repositorio básico para conseguir esto.</p>
+                <p>Este camino es también útil para recuperar rápidamente el contenido del repositorio de trabajo de alguna otra persona. Si tú y otra persona estáis trabajando en el mismo proyecto y ésta quiere mostrarte algo, el usar un comando tal como git pull /home/john/project suele ser más sencillo que el que esa persona te lo envíe (push) a un servidor remoto y luego tú lo recojas (pull) desde allí.</p>
+                <h3>Desventajas</h3>
+                <p>La principal desventaja de los repositorios basados en carpetas y archivos es su dificultad de acceso desde distintas ubicaciones. Por ejemplo, si quieres enviar (push) desde tu portátil cuando estás en casa, primero tienes que montar el disco remoto; lo cual puede ser difícil y lento, en comparación con un acceso basado en red.</p>
+                <p>Cabe destacar también que una carpeta compartida no es precisamente la opción más rápida. Un repositorio local es rápido solamente en aquellas ocasiones en que tienes un acceso rápido a él. Normalmente un repositorio sobre NFS es más lento que un repositorio SSH en el mismo servidor, asumiendo que las pruebas se hacen con Git sobre discos locales en ambos casos.</p>
+                <h3>Protocolos HTTP</h3>
+                <p>Git puede utilizar el protocolo HTTP de dos maneras. Antes de la versión 1.6.6 de Git, solo había una forma de utilizar el protocolo HTTP y normalmente en sólo lectura. Con la llegada de la versión 1.6.6 se introdujo un nuevo protocolo más inteligente que involucra a Git para negociar la transferencia de datos de una manera similar a como se hace con SSH. En los últimos años, este nuevo protocolo basado en HTTP se ha vuelto muy popular puesto que es más sencillo para el usuario y también más inteligente. Nos referiremos a la nueva versión como el HTTP “Inteligente” y llamaremos a la versión anterior el HTTP “tonto”. Comenzaremos primero con el protocolo HTTP “Inteligente”.</p>
+                <h3>HTTP Inteligente</h3>
+                <p>El protocolo HTTP “Inteligente” funciona de forma muy similar a los protocolos SSH y Git, pero se ejecuta sobre puertos estándar HTTP/S y puede utilizar los diferentes mecanismos de autenticación HTTP. Esto significa que puede resultar más fácil para los usuarios, puesto que se pueden identificar mediante usuario y contraseña (usando la autenticación básica de HTTP) en lugar de usar claves SSH.</p>
+                <p>Es, probablemente, la forma más popular de usar Git ahora, puesto que puede configurarse para servir tanto acceso anónimo (como con el protocolo Git) y acceso autenticado para realizar envíos (push), con cifrado similar a como se hace con SSH. En lugar de tener diferentes URL para cada cosa, se puede tener una única URL para todo. Si intentamos subir cambios (push) al repositorio, nos pedirá usuario y contraseña, y para accesos de lectura se puede permitir el acceso anónimo o requerir también usuario.</p>
+                <p>De hecho, para servicios como GitHub, la URL que usamos para ver el repositorio en la web (por ejemplo, “https://github.com/schacon/simplegit”) es la misma que usaríamos para clonar y, si tenemos permisos, para enviar cambios.</p>
+                <h3>HTTP Tonto</h3>
+                <p>Si el servidor no dispone del protocolo HTTP “Inteligente”, el cliente de Git intentará con el protocolo clásico HTTP que podemos llamar HTTP “Tonto”. Este protocolo espera obtener el repositorio Git a través de un servidor web como si accediera a archivos normales. Lo bonito de este protocolo es la simplicidad para configurarlo. Básicamente, todo lo que tenemos que hacer es poner el repositorio Git bajo el directorio raíz de documentos HTTP y especificar un punto de enganche (hook) de post-update (véase Puntos de enganche en Git). Desde ese momento, cualquiera con acceso al servidor web donde se publique el repositorio podrá también clonarlo. Para permitir acceso de lectura con HTTP, debes hacer algo similar a lo siguiente:</p>
+                <code>$ cd /var/www/htdocs/</code>
+                <code>$ git clone --bare /path/to/git_project gitproject.git</code>
+                <code>$ cd gitproject.git</code>
+                <code>$ mv hooks/post-update.sample hooks/post-update</code>
+                <code>$ chmod a+x hooks/post-update</code>
+                <p>Y esto es todo. El punto de enganche post-update que trae Git de manera predeterminada ejecuta el comando adecuado (git update-server-info) para hacer que las operaciones de clonado o recuperación (fetch) funcionen de forma adecuada. Este comando se ejecuta cuando se envían cambios (push) al repositorio (mediante SSH, por ejemplo); luego, otras personas pueden clonar mediante algo como:</p>
+                <code>$ git clone https://example.com/gitproject.git</code>
+                <p>En este caso concreto, hemos utilizado la carpeta /var/www/htdocs, que es la habitual en configuraciones Apache, pero se puede usar cualquier servidor web estático. Basta con que se ponga el repositorio básico (bare) en la carpeta correspondiente. Los datos de Git son servidos como archivos estáticos simples (véase Los entresijos internos de Git para saber exactamente cómo se sirven).</p>
+                <p>Por lo general tendremos que elegir servirlos en lectura/escritura con el servidor HTTP “Inteligente” o en solo lectura con el servidor “tonto”. Mezclar ambos servicios no es habitual.</p>
+                <h3>Ventajas</h3>
+                <p>Nos centraremos en las ventajas de la versión “Inteligente” del protocolo HTTP.</p>
+                <p>La simplicidad de tener una única URL para todos los tipos de acceso y que el servidor pida autenticación sólo cuando se necesite, hace las cosas muy fáciles para el usuario final. Permitir autenticar mediante usuario y contraseña es también una ventaja sobre SSH, ya que los usuarios no tendrán que generar sus claves SSH y subir la pública al servidor antes de comenzar a usarlo. Esta es la principal ventaja para los usuarios menos especializados, o para los usuarios de sistemas donde el SSH no se suele usar. También es un protocolo muy rápido y eficiente, como sucede con el SSH.</p>
+                <p>También se pueden servir los repositorios en sólo lectura con HTTPS, lo que significa que se puede cifrar la transferencia de datos; incluso se puede identificar a los clientes haciéndoles usar certificados convenientemente firmados.</p>
+                <p>Otra cosa interesante es que los protocolos HTTP/S son los más ampliamente utilizados, de forma que los cortafuegos corporativos suelen permitir el tráfico a través de esos puertos.</p>
+                <h3>Inconvenientes</h3>
+                <p>Git sobre HTTP/S puede ser un poco más complejo de configurar comparado con el SSH en algunos sitios. En otros casos, se adivina poca ventaja sobre el uso de otros protocolos.</p>
+                <p>Si utilizamos HTTP para envíos autenticados, proporcionar nuestras credenciales cada vez que se hace puede resultar más complicado que usar claves SSH. Hay, sin embargo, diversas utilidades de cacheo de credenciales, como Keychain en OSX o Credential Manager en Windows; haciendo esto menos incómodo. Lee Almacenamiento de credenciales para ver cómo configurar el cacheo seguro de contraseñas HTTP en tu sistema.</p>
+                <h3>El Protocolo SSH</h3>
+                <p>SSH es un protocolo muy habitual para alojar repositorios Git en hostings privados. Esto es así porque el acceso SSH viene habilitado de forma predeterminada en la mayoría de los servidores, y si no es así, es fácil habilitarlo. Además, SSH es un protocolo de red autenticado sencillo de utilizar.</p>
+                <p>Para clonar un repositorio a través de SSH, puedes indicar una URL ssh:// tal como:</p>
+                <code>$ git clone ssh://user@server/project.git</code>
+                <p>También puedes usar la sintaxis estilo scp del protocolo SSH:</p>
+                <code>$ git clone user@server:project.git</code>
+                <p>Pudiendo asimismo prescindir del usuario; en cuyo caso Git asume el usuario con el que estés conectado en ese momento.</p>
+                <h3>Ventajas</h3>
+                <p>El uso de SSH tiene múltiples ventajas. En primer lugar, SSH es relativamente fácil de configurar: los “demonios” (daemons) SSH son de uso común, muchos administradores de red tienen experiencia con ellos y muchas distribuciones del SO los traen predefinidos o tienen herramientas para gestionarlos. Además, el acceso a través de SSH es seguro, estando todas las transferencias encriptadas y autentificadas. Y, por último, al igual que los protocolos HTTP/S, Git y Local, SSH es eficiente, comprimiendo los datos lo más posible antes de transferirlos.</p>
+                <h3>Desventajas</h3>
+                <p>El aspecto negativo de SSH es su imposibilidad para dar acceso anónimo al repositorio. Todos han de tener configurado un acceso SSH al servidor, incluso aunque sea con permisos de solo lectura; lo que no lo hace recomendable para soportar proyectos abiertos. Si lo usas únicamente dentro de tu red corporativa, posiblemente sea SSH el único protocolo que tengas que emplear. Pero si quieres también habilitar accesos anónimos de solo lectura, tendrás que reservar SSH para tus envios (push) y habilitar algún otro protocolo para las recuperaciones (pull) de los demás.</p>
+                <h3>El protocolo Git</h3>
+                <p>El protocolo Git es un “demonio” (daemon) especial, que viene incorporado con Git. Escucha por un puerto dedicado (9418) y nos da un servicio similar al del protocolo SSH; pero sin ningún tipo de autentificación. Para que un repositorio pueda exponerse a través del protocolo Git, tienes que crear en él un archivo git-daemon-export-ok; sin este archivo, el “demonio” no hará disponible el repositorio. Pero, aparte de esto, no hay ninguna otra medida de seguridad. O el repositorio está disponible para que cualquiera lo pueda clonar, o no lo está. Lo cual significa que, normalmente, no se podrá enviar (push) a través de este protocolo. Aunque realmente si que puedes habilitar el envío, si lo haces, dada la total falta de algún mecanismo de autentificación, cualquiera que encuentre la URL a tu proyecto en Internet, podrá enviar (push) contenidos a él. Ni qué decir tiene, que esto sólo lo necesitarás en contadas ocasiones.</p>
+                <h3>Ventajas</h3>
+                <p>El protocolo Git es el más rápido de todos los disponibles. Si has de servir mucho tráfico de un proyecto público o servir un proyecto muy grande, que no requiera autentificación para leer de él, un “demonio” Git es la respuesta. Utiliza los mismos mecanismos de transmisión de datos que el protocolo SSH, pero sin la sobrecarga de la encriptación ni de la autentificación.</p>
+                <h3>Desventajas</h3>
+                <p>El principal problema del protocolo Git, es su falta de autentificación. No es recomendable tenerlo como único protocolo de acceso a tus proyectos. Habitualmente, lo combinarás con un acceso SSH o HTTPS para los pocos desarrolladores con acceso de escritura que envíen (push) material, dejando el protocolo git:// para los accesos solo-lectura del resto de personas.</p>
+                <p>Por otro lado, necesita activar su propio “demonio”, y necesita configurar xinetd o similar, lo cual no suele estar siempre disponible en el sistema donde estés trabajando. Requiere además abrir expresamente el acceso al puerto 9418 en el cortafuegos, ya que estará cerrado en la mayoría de los cortafuegos corporativos.</p>
+
             </section>
 
             <section class="main-section" id="Git_en_Entornos_Distribuidos">
                 <header>
                     <h3>Git en Entornos Distribuidos</h3>
                 </header>
+                <p>Ahora que ya tienes un repositorio Git configurado como punto de trabajo para que los desarrolladores compartan su código, y además ya conoces los comandos básicos de Git para usar en local, verás cómo se puede utilizar alguno de los flujos de trabajo distribuido que Git permite.</p>
+                <p>En este capítulo verás como trabajar con Git en un entorno distribuido como colaborador o como integrador. Es decir, aprenderás como contribuir adecuadamente a un proyecto, de manera fácil tanto para ti como para el responsable del proyecto, y también como mantener adecuadamente un proyecto con múltiples desarrolladores.</p>
+                <h3>Flujos de trabajo distribuidos</h3><!--titulo resaltado-->
+                <p>A diferencia de los Sistemas Centralizados de Control de Versiones (CVCSs, Centralized Version Control Systems), la naturaleza distribuida de Git te permite mucha más flexibilidad en la manera de colaborar en proyectos. En los sistemas centralizados, cada desarrollador es un nodo de trabajo más o menos en igualdad con un repositorio central. En Git, sin embargo, cada desarrollador es potencialmente un nodo o un repositorio - es decir, cada desarrollador puede contribuir a otros repositorios y mantener un repositorio público en el cual otros pueden basar su trabajo y al cual pueden contribuir.</p>
+                <p>Esto abre un enorme rango de posibles flujos de trabajo para tu proyecto y/o tu equipo, así que revisaremos algunos de los paradigmas que toman ventajas de esta flexibilidad Repasaremos las fortalezas y posibles debilidades de cada diseño; podrás elegir uno solo o podrás mezclarlos para escoger características concretas de cada uno.</p>
+                <h3>Flujos de trabajo centralizado</h3>
+                <p>En sistemas centralizados, habitualmente solo hay un modelo de colaboración - el flujo de trabajo centralizado. Un repositorio o punto central que acepta código y todos sincronizan su trabajo con él. Unos cuantos desarrolladores son nodos de trabajo - consumidores de dicho repositorio - y sincronizan con ese punto.</p>
+                <div>
+                    <img src="img-5-1.png">
+                </div>
+                <code>Figure 54. Centralized workflow.</code>
+                <p>Esto significa que si dos desarrolladores clonan desde el punto central, y ambos hacen cambios, solo el primer desarrollador en subir sus cambios lo podrá hacer sin problemas. El segundo desarrollador debe fusionar el trabajo del primero antes de subir sus cambios, para no sobrescribir los cambios del primero. Este concepto es válido tanto en Git como en Subversion.</p>
+                <p>Si ya está cómodo con un flujo de trabajo centralizado en su empresa o en su equipo, puede seguir utilizando fácilmente ese flujo de trabajo con Git. Simplemente configure un único repositorio, y dé a cada uno en su equipo acceso de empuje; Git no permitirá que los usuarios se sobrescriban entre sí. Digamos que John y Jessica empiezan a trabajar al mismo tiempo. John termina su cambio y lo empuja al servidor. Entonces Jessica intenta empujar sus cambios, pero el servidor los rechaza. Le dice que está tratando de empujar cambios no rápidos y que no podrá hacerlo hasta que busque y se fusione. Este flujo de trabajo es atractivo para mucha gente porque es un paradigma con el que muchos están familiarizados y cómodos.</p>
+                <p>Esto tampoco se limita a los equipos pequeños. Con el modelo de ramificación de Git, es posible que cientos de desarrolladores trabajen con éxito en un único proyecto a través de docenas de ramas simultáneamente.</p>
+                <h3>Flujo de Trabajo Administrador-Integración</h3>
+                <p>Debido a que Git permite tener múltiples repositorios remotos, es posible tener un flujo de trabajo donde cada desarrollador tenga acceso de escritura a su propio repositorio público y acceso de lectura a todos los demás. Este escenario a menudo incluye un repositorio canónico que representa el proyecto "oficial". Para contribuir a ese proyecto, creas tu propio clon público del proyecto y haces pull con tus cambios. Luego, puede enviar una solicitud al administrador del proyecto principal para que agregue los cambios. Entonces, el administrador agrega el repositorio como remoto, prueba los cambios localmente, los combina en su rama y los envía al repositorio. El proceso funciona de la siguiente manera. (ver Flujo de Trabajo Administrador-Integración.):</p>
+                <ol>
+                    <li>El administrador del proyecto hace un push al repositorio público.</li>
+                    <li>El contribuidor clona ese repositorio y realiza los cambios.</li>
+                    <li>El contribuidor realiza un push con su copia pública del proyecto.</li>
+                    <li>El contribuidor envía un correo electrónico al administrador pidiendo que haga pull de los cambios.</li>
+                    <li>El administrador agrega el repositorio del contribuidor como remoto y fusiona ambos localmente.</li>
+                    <li>El administrador realiza un push con la fusión del código al repositorio principal.</li>
+                </ol>
+                <div>
+                    <img src="img-5-2.png">
+                </div>
+                <code>Figure 55. Flujo de Trabajo Administrador-Integración.</code>
+                <p>Este es un flujo de trabajo muy común con herramientas basadas en hubs como GitHub o GitLab, donde es fácil hacer un fork de un proyecto e introducir los cambios en este fork para que todos puedan verlos. Una de las principales ventajas de este enfoque es que el contribuidor puede continuar realizando cambios y el administrador principal del repositorio puede incorporar los cambios en cualquier momento. Los contribuidores no tienen que esperar a que el proyecto incorpore sus cambios; cada parte puede trabajar a su propio ritmo.</p>
+                <h3>Flujo de Trabajo Dictador-Tenientes</h3>
+                <p>Esta es una variante de un flujo de trabajo de múltiples repositorios. Generalmente es utilizado por grandes proyectos con cientos de colaboradores; Un ejemplo famoso es el kernel de Linux. Varios administradores de integración están a cargo de ciertas partes del repositorio. Se les llaman “tenientes”. Todos los tenientes tienen un gerente de integración conocido como el “dictador benévolo”. El repositorio del dictador benevolente sirve como el repositorio de referencia del cual todos los colaboradores necesitan realizar pull. El proceso funciona así. (ver Flujo de Trabajo Dictador Benevolente.):</p>
+                <ol>
+                    <li>Los desarrolladores trabajan en su propia rama especifica y fusionan su código en la rama master, la cual, es una copia de la rama del dictador.</li>
+                    <li>Los tenientes fusionan el código de las ramas master de los desarrolladores en sus ramas master de tenientes.</li>
+                    <li>El dictador fusiona la rama master de los tenientes a su rama master de dictador.</li>
+                    <li>El dictador hace push del contenido de su rama master al repositorio para que otros fusionen los cambios a sus ramas.</li>
+                </ol>
+                <div>
+                    <img src="img-5-3.png">
+                </div>
+                <code>Figure 56. Flujo de Trabajo Dictador Benevolente.</code>
+                <p>Este tipo de flujo de trabajo no es común, pero puede ser útil en proyectos muy grandes o en entornos altamente jerárquicos. Permite al líder del proyecto (el dictador) delegar gran parte del trabajo y recopilar grandes subconjuntos de código en múltiples puntos antes de integrarlos.</p>
+                <h3>Resumen de Flujos de Trabajo</h3>
+                <p>Estos son algunos de los flujos de trabajo de uso común que son posibles con un sistema distribuido como Git, pero se puede observar que hay muchas posibles variaciones que buscan adaptarse a tu flujo de trabajo particular. Ahora puedes (con suerte) determinar qué combinación de flujo de trabajo puede funcionar mejor para ti, cubriremos algunos ejemplos más específicos sobre cómo cumplir los roles principales que conforman los diferentes flujos. En la siguiente sección, aprenderás sobre algunos patrones comunes para contribuir a un proyecto.</p>
+                <!--guit en entornos distribuidos 5.1 solamente-->
             </section>
 
             <section class="main-section" id="GitHub">
                 <header>
                     <h3>GitHub</h3>
                 </header>
+                <p>GitHub es el mayor proveedor de alojamiento de repositorios Git, y es el punto de encuentro para que millones de desarrolladores colaboren en el desarrollo de sus proyectos. Un gran porcentaje de los repositorios Git se almacenan en GitHub, y muchos proyectos de código abierto lo utilizan para hospedar su Git, realizar su seguimiento de fallos, hacer revisiones de código y otras cosas. Por tanto, aunque no sea parte directa del proyecto de código abierto de Git, es muy probable que durante tu uso profesional de Git necesites interactuar con GitHub en algún momento.</p>
+                <p>Este capítulo trata del uso eficaz de GitHub. Veremos cómo crear y gestionar una cuenta, crear y gestionar repositorios Git, también los flujos de trabajo (workflows) habituales para participar en proyectos y para aceptar nuevos participantes en los tuyos, la interfaz de programación de GitHub (API) y muchos otros pequeños trucos que te harán, en general, la vida más fácil.</p>
+                <p>Si no vas a utilizar GitHub para hospedar tus proyectos o para colaborar con otros, puedes saltar directamente a Herramientas de Git.</p>
+                <h3>Creación y configuración de la cuenta</h3> <!--titulo resaltado-->
+                <p>Lo primero que necesitas es una cuenta de usuario gratuita. Simplemente visita https://github.com, elige un nombre de usuario que no esté ya en uso, proporciona un correo y una contraseña, y pulsa el botón verde grande “Sign up for GitHub”.</p>
+                <div>
+                    <img src="img-6-1.png">
+                </div>
+                <code>Figure 82. Formulario para darse de alta en GitHub.</code>
+                <p>Lo siguiente que verás es la página de precios para planes mejores, pero lo puedes ignorar por el momento. GitHub te enviará un correo para verificar la dirección que les has dado. Confirmar la dirección ahora, es bastante importante (como veremos después).</p>
+                <p>NOTE: GitHub proporciona toda su funcionalidad en cuentas gratuitas, puedes tener tanto proyectos públicos como privados ilimitados. La única limitación ese que en cada uno de tus proyectos privados solo puedes tener un máximo de tres colaboradores. Los planes de pago de GitHub te permiten tener algunas herramientas extra, pero esto es algo que no veremos en este libro.</p>
+                <P>Si pulsas en el logo del gato con patas de pulpo en la parte superior izquierda de la pantalla llegarás a tu escritorio principal. Ahora ya estás listo para comenzar a usar GitHub.</P>
+                <h3>Desde ya, puedes acceder a los repositorios Git utilizando el protocolo https://, identificándote con el usuario y la contraseña que acabas de elegir. Sin embargo, para simplificar el clonado de proyectos públicos, no necesitas crearte la cuenta. Es decir, la cuenta sólo la necesitas cuando comienzas a hacer cosas como bifurcar (fork) proyectos y enviar tus propios cambios más tarde.</h3>
+                <p>Si prefieres usar SSH, necesitas configurar una clave pública. Si aún no la tienes, mira cómo generarla en Generando tu clave pública SSH.) Abre tu panel de control de la cuenta utilizando el enlace de la parte superior derecha de la ventana:</p>
+                <div>
+                    <img src="img-6-2.png">
+                </div>
+                <code>Figure 83. Enlace “Account settings”.</code>
+                <p>Aquí selecciona en el lado izquierdo la opción “SSH keys”.</p>
+                <div>
+                    <img src="img-6-3.png">
+                </div>
+                <code>Figure 84. Enlace “SSH keys”.</code>
+                <p>Desde ahí, pulsa sobre "Add an SSH key", proporcionando un nombre y pegando los contenidos del archivo ~/.ssh/id_rsa.pub (o donde hayas definido tu clave pública) en el área de texto, y pulsa sobre “Add key”.</p>
+                <p>NOTE: Asegúrate de darle a tu clave un nombre que puedas recordar. Puedes, por ejemplo, añadir claves diferentes, con nombres como "Clave Portátil" o "Cuenta de trabajo", de modo que si tienes que revocar alguna clave más tarde, te resultará más fácil saber cuál es.</p>
+                <h3>Tu icono</h3>
+                <p>También, si quieres, puedes reemplazar el icono (avatar) que te generaron para ti con una imagen de tu elección. En primer lugar selecciona la opción “Profile” (encima de la opción de “SSH keys”) y pulsa sobre “Upload new picture”.</p>
+                <div>
+                    <img src="img-6-4.png">
+                </div>
+                <code>Figure 85. Enlace “Profile”.</code>
+                <p>Nosotros eligiremos como ejemplo una copia del logo de Git que tengamos en el disco duro y luego tendremos la opción de recortarlo al subirlo.</p>
+                <div>
+                    <img src="img-6-5.png">
+                </div>
+                <code>Figure 86. Recortar tu icono</code>
+                <p>Desde ahora, quien vea tu perfil o tus contribuciones a repositorios, verá tu nuevo icono junto a tu nombre.</p>
+                <p>Si da la casualidad que ya tienes tu icono en el popular servicio Gravatar (conocido por su uso en las cuentas de Wordpress), este icono será detectado y no tendrás que hacer este paso, si no lo deseas.</p>
+                <h3>Tus direcciones de correo</h3>
+                <p>La forma con la que GitHub identifica tus contribuciones a Git es mediante la dirección de correo electrónico. Si tienes varias direcciones diferentes en tus contribuciones (commits) y quieres que GitHub sepa que son de tu cuenta, necesitas añadirlas todas en el apartado Emails de la sección de administración.</p>
+                <div>
+                    <img src="img-6-6.png">
+                </div>
+                <code>Figure 87. Añadiendo direcciones de correo</code>
+                <p>En Añadiendo direcciones de correo podemos ver los diferentes estados posibles. La dirección inicial se verifica y se utiliza como dirección principal, lo que significa que es donde vas a recibir cualquier notificación. La siguiente dirección se puede verificar y ponerla entonces como dirección principal, si quieres cambiarla. La última dirección no está verificada, lo que significa que no puedes usarla como principal. Pero si GitHub ve un commit con esa dirección, la identificará asociándola a tu usuario.</p>
+                <h3>Autentificación de dos pasos</h3>
+                <p>Finalmente, y para mayor seguridad, deberías configurar la Autentificación de Dos Pasos o “2FA”. Este tipo de autentificación se está haciendo más popular para reducir el riesgo de que te roben la cuenta. Al activarla, GitHub te pedirá identificarte de dos formas, de manera que si una de ellas resulta comprometida, el atacante no conseguirá acceso a tu cuenta.</p>
+                <p>Puedes encontrar la configuración de “2FA” en la opción Security de los ajustes de la cuenta.</p>
+                <div>
+                    <img src="img-6-7.png">
+                </div>
+                <code>Figure 88. 2FA dentro de Security</code>
+                <p>Si pulsas en el botón “Set up two-factor authentication”, te saldrá una página de configuración donde podrás elegir un generador de códigos en una aplicación de móvil (es decir, códigos de un solo uso) o bien podrás elegir que te envíen un SMS cada vez que necesites entrar.</p>
+                <p>Cuando configures este método de autentificación, tu cuenta será un poco más segura ya que tendrás que proporcionar un código junto a tu contraseña cada vez que accedas a GitHub.</p>
+                <!--github 6.1 solamente-->
             </section>
 
             <section class="main-section" id="Herramientas_de_Git">
