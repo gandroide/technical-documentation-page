@@ -387,42 +387,68 @@
                 <header>
                     <h3>Herramientas de Git</h3>
                 </header>
+                <p>Hasta ahora, ya has aprendido la mayoría de los comandos diarios y el flujo de trabajo que necesitas para manejar y mantener un repositorio de Git para tu control del código fuente. Has conseguido cumplir con las tareas básicas de seguimiento y has agregado archivos, además has aprovechado el poder del area de staging y has conocido el tema de branching y merging.</p>
+                <p>Ahora vas a explorar unas cuantas cosas bastantes poderosas que Git puede realizar y que no necesariamente vas a usar en tu día a día, pero que puedes necesitar en algún momento.</p>
+                <h3>Revisión por selección</h3> <!--titulo resaltado-->
+                <p>Git te permite especificar ciertos commits o un rango de éstos de muchas maneras. No son necesariamente obvias, pero es útil conocerlas.</p>
+                <h3>Revisiones individuales</h3>
+                <p>Obviamente se puede referir a un “commit” por el hash SHA-1 que se le asigna, pero también existen formas más amigables de referirse a los commits. Esta sección delinea varias maneras en las que se puede referir a un “commit” indiviual.</p>
+                <!--7.1 incompleto-->
             </section>
 
             <section class="main-section" id="Personalizacion_de_Git">
                 <header>
                     <h3>Personalizacion de Git</h3>
                 </header>
+                <p>Hasta ahora, hemos visto los aspectos básicos del funcionamiento de Git y la manera de utilizarlo; además de haber presentado una serie de herramientas suministradas con Git para ayudarnos a usarlo de manera sencilla y eficiente. En este capítulo, avanzaremos sobre ciertas operaciones que puedes utilizar para personalizar el funcionamiento de Git ; presentando algunos de sus principales ajustes y el sistema de anclajes (hooks). Con estas operaciones, será fácil conseguir que Git trabaje exactamente como tú, tu empresa o tu grupo necesitéis.</p>
+                <h3>Configuración de Git</h3><!--titulo resaltado-->
+                <p>Como se ha visto brevemente en Inicio - Sobre el Control de Versiones, podemos acceder a los ajustes de configuración de Git a través del comando git config. Una de las primeras acciones que has realizado con Git ha sido el configurar tu nombre y tu dirección de correo electrónico.</p>
+                <!--8.1 incompleto-->
             </section>
 
             <section class="main-section" id="Git_y_Otros_Sistemas">
                 <header>
                     <h3>Git y Otros Sistemas</h3>
                 </header>
+                <p>El mundo no es perfecto. Por lo general, no se puede cambiar inmediatamente cada proyecto con el que está en contacto Git. A veces estás atrapado en un proyecto usando otro VCS, y desearías poder usar Git. Pasaremos la primera parte de este capítulo aprendiendo sobre cómo utilizar Git como cliente cuando el proyecto en el que se está trabajando está alojado en un sistema diferente.</p>
+                <p>En algún momento, puede que desees convertir tu proyecto existente a Git. La segunda parte de este capítulo describe cómo migrar tu proyecto en Git desde varios sistemas específicos, así como un método que funcionará si no existe una herramienta de importación pre-construida.</p>
+                <!--9.1 incompleto-->
             </section>
 
             <section class="main-section" id="Git_Internamente">
                 <header>
                     <h3>Git Internamente</h3>
                 </header>
+                <p>Puede que hayas llegado a este capítulo saltando desde alguno previo o puede que hayas llegado tras leer todo el resto del libro - en uno u otro caso, aquí es donde aprenderás acerca del funcionamiento interno y la implementación de Git. Nos parece que esta información es realmente importante para entender cuan útil y potente es Git, pero algunas personas opinan que puede ser confuso e innecesariamente complejo para novatos. Por ello, lo hemos puesto en el capítulo final del libro; de tal forma que puedas leerlo antes o después, en cualquier momento, a lo largo de tu proceso de aprendizaje. Lo dejamos en tus manos.</p>
+                <p>Y, ahora que estamos aquí, comencemos con el tema. Ante todo, si no está aún suficientemente claro, Git es fundamentalmente un sistema de archivo de contenido localizable con una interfaz de usuario de VCS escrita sobre él. En breve vas a aprender más acerca de que significa esto.</p>
+                <p>En los primeros tiempos de Git (principalmente antes de la versión 1.5), la interfaz de usuario era mucho más compleja, ya que se centraba en el sistema de archivos en lugar de en mejorado VCS. En los últimos años, la IU se ha refinado hasta llegar a ser tan limpia y sencillo de usar como la de cualquier otro sistema; pero frecuentemente, el estereotipo persiste en lo complejo y difícil de aprender que era la IU anterior de Git.</p>
+                <p>La capa de contenido localizable del sistema de archivos es increíblemente interesante; por ello, es lo primero que vamos a cubrir en este capítulo. A continuación mostraremos los mecanismos de transporte y las tareas de mantenimiento del repositorio que posiblemente necesites usar alguna vez.</p>
+                <!--10.1 incompleto-->
             </section>
 
             <section class="main-section" id="Git_en_Otros_Entornos">
                 <header>
                     <h3>Git en Otros Entornos</h3>
                 </header>
+                <p>Si has leído hasta aquí todo el libro, seguro que has aprendido un montón de cosas sobre el uso de Git con la línea de comandos. Se puede trabajar con archivos locales, conectar nuestro repositorio con otros repositorios en la red y realizar nuestro trabajo eficientemente con ellos. Aunque las opciones no terminan ahí, Git se utiliza con parte de un ecosistema mayor y un terminal no siempre es la mejor forma de trabajar. Vamos a ver otros tipos de entornos en los que Git resulta muy útil y cómo otras aplicaciones (incluidas las tuyas) pueden trabajar conjuntamente con Git.</p>
+                <!--11.1 incompleto-->
             </section>
 
             <section class="main-section" id="Integrando_Git_en_tus_Aplicaciones">
                 <header>
                     <h3>Integrando Git en tus Aplicaciones</h3>
                 </header>
+                <p>Si tu aplicación es para desarrolladores, es muy probable que pueda beneficiarse de la integración con el control de código fuente. Incluso las aplicaciones que no sean para desarrolladores, tales como editores de documentos, podrían beneficiarse de las características de control de versiones, y el modelo de Git funciona muy bien para muchos escenarios diferentes.</p>
+                <p>Si necesitas integrar Git con tu aplicación, tienes básicamente tres opciones: generar un shell y usar la herramienta de línea de comandos de Git; Libgit2; y JGit.</p>
+                <!--12.1 incompleto-->
             </section>
 
             <section class="main-section" id="Comandos_de_Git">
                 <header>
-                <h3>Comandos de Git</h2>
+                    <h3>Comandos de Git</h2>
                 </header>
+                <p>A lo largo del libro hemos introducido docenas de comandos de Git y nos hemos esforzado para introducirlos dentro de una especie de narrativa, añadiendo más comandos a la historia poco a poco. Sin embargo, esto nos deja con ejemplos de uso de los comandos algo dispersos por todo el libro.</p>
+                <p>En este apéndice, repasaremos todos los comandos de Git que hemos tratado a lo largo del libro, agrupados por el uso que se les ha dado. Vamos a hablar de lo que hace cada comando de manera muy general y a continuación señalaremos en qué parte del libro puedes encontrar un uso de él.</p>
             </section>
         </div>
 
